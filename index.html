@@ -1,144 +1,50 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Launching Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <title>Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <style>
-        /* Grundlayout für die schwarze Seite */
         body {
-            display: flex;
+            display: grid;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: black;
-            overflow: hidden;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Hintergrundtext */
-        .background-text {
-            position: absolute;
-            font-size: 4em;
-            font-weight: bold;
-            color: white;
-            z-index: 1;
-            user-select: none;
-            opacity: 1;
-        
-    
-        }
-
-
-        /* Cube-Container */
-        .cube {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            transform-style: preserve-3d;
-            transform: rotateX(20deg) rotateY(30deg);
-            animation: rotate 5s infinite linear;
-            z-index: 2;
-        }
-
-        /* Seiten des Würfels mit Regenbogeneffekt */
-        .cube div {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2em;
-            color: white;
-            background: transparent;
-            border: none;
-            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5); /* Leichter Innen-Schatten für Tiefe */
-            backdrop-filter: blur(5px); /* Unschärfe für verzerrten Effekt */
+            background-color: black; /* Schwarzer Hintergrund */
+            color: white; /* Weiße Schrift */
+            font-family: Arial, sans-serif;
             text-align: center;
-            overflow: hidden;
-            filter: blur(2px) brightness(120%);
+            position: relative;
         }
-
-        .cube-container {
-            perspective: 1000px;
-        }
-
-        .front  { transform: translateZ(100px); background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet); }
-        .back   { transform: rotateY(180deg) translateZ(100px); background: linear-gradient(45deg, violet, blue, cyan, green, yellow, orange, red); }
-        .left   { transform: rotateY(-90deg) translateZ(100px); background: linear-gradient(45deg, yellow, cyan, blue, violet, red, orange, green); }
-        .right  { transform: rotateY(90deg) translateZ(100px); background: linear-gradient(45deg, green, red, orange, yellow, blue, cyan, violet); }
-        .top    { transform: rotateX(90deg) translateZ(100px); background: linear-gradient(45deg, cyan, green, yellow, orange, red, violet, blue); }
-        .bottom { transform: rotateX(-90deg) translateZ(100px); background: linear-gradient(45deg, orange, yellow, green, cyan, blue, violet, red); }
-
-        /* Würfel-Rotation */
-        @keyframes rotate {
-        0% { transform: rotateX(0deg) rotateY(0deg); }
-        25% { transform: rotateX(45deg) rotateY(90deg); }
-        50% { transform: rotateX(0deg) rotateY(180deg); }
-        75% { transform: rotateX(-45deg) rotateY(270deg); }
-        100% { transform: rotateX(0deg) rotateY(360deg); }
-        }
-
-        .logo-container {
+        #logo {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 40px;
+            left: 40px;
         }
 
-        /* Container für die unteren Textboxen */
-        .text-container {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
         }
-
-        .text-box {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-family: 'Poppins', sans-serif; /* Poppins Schriftart */
         }
-
-        .logo {
-          width: 50px; /* Passe die Breite an */
-          height: 50px; /* Passe die Höhe an */
-          position: absolute;
-          top: 20px;
-          right: 20px;
+        p {
+            font-size: 15px; /* Schriftgröße 15px */
+            margin-top: 10px;
+            font-family: 'Poppins', sans-serif; /* Poppins Schriftart */
         }
-
-
-
-        
     </style>
 </head>
 <body>
-    <!-- Hintergrundtext -->
-    <div class="background-text">Launching soon!</div>
-
-    <!-- Rotierender transparenter Cube -->
-    <div class="cube">
-        <div class="front"></div>
-        <div class="back"></div>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div class="top"></div>
-        <div class="bottom"></div>
+    <img id="logo" src="logo-weiß.svg" alt="Logo" width="150">
+    <div class="content">
+        <h1>Launching Soon!</h1>
+        <p>It's not here yet, but we'll let you in on a secret. It's coming really, really soon. <br> So sit tight and check back shortly. You just might see something that will blow your socks off!</p>
     </div>
-
-    <div class="logo-container">
-        <img src="logo-weiß.svg" alt="Logo" class="logo">
+    <div>
+        <p>Really excited to get in touch with us? Send us an email at info@luciddecisions.com</p>
     </div>
-
-    <div class="text-container">
-        <div class="text-box">It's not here yet, but we'll let you in on a secret. <br> It's coming really, really soon. So sit tight and check back shortly. <br> You just might see something that will blow your socks off!</div>
-        <div class="text-box">Really excited to get in touch with us? <br> Send us an email at info@luciddecisions.com</div>
-    </div>
-
-
 </body>
 </html>
